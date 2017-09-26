@@ -15,5 +15,5 @@
 	for($i = 1;$i<10;$i++){
 		$redis->lpush('number', $i);
 	}
-	echo  '列表中共有 :' . lsize('number') . '个元素';
+	echo  '列表中共有 :' . $redis->lsize('number') . '个元素';
 ?>
