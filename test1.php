@@ -9,7 +9,7 @@
 	$redis->incr('key1');
 	echo $redis->get('key1');*/
 	$redis->lpush('our_name','董亚华');
-	echo '我的名字' . $redis->get('our_name');
+	echo '我的名字' . $redis->lpop('our_name');
 	$redis->lpush('our_name','韩佳娜');
-	echo '我们的名字' . $redis->get('our_name');
+	echo '我们的名字' . $redis->lpop('our_name');
 ?>
