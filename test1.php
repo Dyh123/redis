@@ -12,6 +12,7 @@
 	echo '我的名字' . $redis->lpop('our_name');
 	$redis->lpush('our_name','韩佳娜');
 	echo '我们的名字' . $redis->lpop('our_name');*/
+	$redis->flushDB();
 	for($i = 1;$i<10;$i++){
 		$redis->lpush('number', $i);
 	}
