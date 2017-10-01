@@ -13,11 +13,11 @@
 			$result = $conn->query($sql);
 			if($result){
 				$redis->set('key',1);
-				$redis->lpop('guest');
+				//$redis->lpop('guest');
 				$conn->commit();
 			}else{
 				$redis->set('key',1);
-				$redis->lpop('guest');
+				//$redis->lpop('guest');
 				$conn->rollback();
 			}
 		}else{
