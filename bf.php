@@ -25,8 +25,6 @@
 		}	
 	}
 	up($redis);
-	while($redis->lsize('guest')){
-		up($redis);
-	}
+	
 	
 ?>

@@ -6,10 +6,5 @@
 	//echo '姓名:' . $redis->get('my_name');
 	/*$redis->lset('number', 2, 100);
 	print_r($redis->lrange('number',0,-1));*/
-	if(!isset($a)){
-		static $a = 1;
-	}
-	echo $a;
-	echo '<hr/>';
-	$a = 2;
+	echo $redis->lsize('guest');
 ?>
