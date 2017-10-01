@@ -1,6 +1,6 @@
 <?php
 	require 'common.php';
-	function up(){
+	function up($redis){
 		if(!($key = $redis->get('key'))){
 			$redis->set('key',1);
 		}
@@ -24,9 +24,9 @@
 			$redis->rpush('guest',1);
 		}	
 	}
-	up();
+	up($redis);
 	while($redis->lsize('guest')){
-		up();
+		up($redis);
 	}
 	
 ?>
