@@ -3,6 +3,7 @@
 	function up($redis){
 		if(!($key = $redis->get('key'))){
 			$redis->set('key',1);
+			$key = 1;
 		}
 		echo $key;exit;
 		if($key==1){
