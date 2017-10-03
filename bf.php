@@ -12,10 +12,12 @@
 			$sql = 'update article set type=1 where type=0 limit 1';
 			$result = $conn->query($sql);
 			if($result){
+				echo 1;
 				$redis->set('key',1);
 				//$redis->lpop('guest');
 				$conn->commit();
 			}else{
+				echo 2;
 				$redis->set('key',1);
 				//$redis->lpop('guest');
 				$conn->rollback();
