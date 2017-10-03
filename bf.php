@@ -5,6 +5,7 @@
 			$redis->set('key',1);
 			//$key = 1;
 		}
+		echo $redis->get('key');exit;
 		if(($redis->get('key'))==1){
 			$redis->set('key',2);
 			$conn = mysqli_connect('127.0.0.1','root','admin123','mydatabase') or die('数据库连接失败');
