@@ -7,7 +7,8 @@
 	/*$redis->lset('number', 2, 100);
 	print_r($redis->lrange('number',0,-1));*/
 	//echo $redis->lsize('guest');
-	echo $redis->get('name1');
+	$redis->incr('age');
+	echo $redis->get('age');
 	echo '<hr>';
-	echo $redis->get('name2');
+	echo $redis->get('age2');
 ?>
