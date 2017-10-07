@@ -19,5 +19,5 @@
 	echo  '列表中共有 :' . $redis->lsize('number') . '个元素';
 	echo '元素为:' . print_r($redis->lrange('number',0,-1));*/
 	//$redis->flushDB();
-	$redis->setex('name',15,'dyh');
+	$redis->mset(array('name1'=>'dyh','name2'=>'dyh2'));
 ?>
