@@ -11,5 +11,5 @@
 	echo $redis->get('age');
 	echo '<hr>';
 	echo $redis->get('age2');
-	echo $redis->type('age3');
+	echo $redis->append('age2',222222);
 ?>
