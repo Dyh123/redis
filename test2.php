@@ -15,5 +15,5 @@
 	$redis->rename('age2','age3');
 	echo '<hr>';
 	echo $redis->get('age3');*/
-	echo $redis->lpop('class');
+	echo $redis->lrange('class',0,-1);
 ?>
