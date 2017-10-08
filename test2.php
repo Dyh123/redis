@@ -8,7 +8,7 @@
 	print_r($redis->lrange('number',0,-1));*/
 	//echo $redis->lsize('guest');
 	$redis->incrby('age',10);
-	echo $redis->get('age');
+	echo $redis->ttl('age');
 	echo '<hr>';
 	echo $redis->get('age2');
 	echo '<hr>';
