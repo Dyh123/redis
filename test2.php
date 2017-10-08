@@ -12,5 +12,5 @@
 	echo '<hr>';
 	echo $redis->get('age2');
 	echo '<hr>';
-	print_r($redis->keys('ag*'));
+	print_r($redis->keys());
 ?>
