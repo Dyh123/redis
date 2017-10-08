@@ -12,5 +12,7 @@
 	echo '<hr>';
 	echo $redis->get('age2');
 	echo '<hr>';
-	print_r($redis->keys());
+	$redis->rename('age2','age3');
+	echo '<hr>';
+	echo $redis->get('age3');
 ?>
