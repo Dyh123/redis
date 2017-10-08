@@ -20,5 +20,6 @@
 	echo '元素为:' . print_r($redis->lrange('number',0,-1));*/
 	//$redis->flushDB();
 	//$redis->mset(array('age'=>'1','age2'=>2));
-	$redis->expire('age',10);
+	//$redis->expire('age',10);
+	$redis->lpush('class','high1');
 ?>
