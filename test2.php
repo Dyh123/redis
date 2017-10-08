@@ -11,4 +11,5 @@
 	echo $redis->get('age');
 	echo '<hr>';
 	echo $redis->get('age2');
+	echo $redis->exists('age');
 ?>
